@@ -1139,7 +1139,7 @@
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMap(); });
 
   function copyAlias(el) {
-    navigator.clipboard.writeText('casamientocelimati').then(() => {
+    navigator.clipboard.writeText(el.textContent.trim()).then(() => {
       document.querySelector('.alias-copy-hint').style.display = 'none';
       const copied = document.getElementById('aliasCopied');
       copied.style.display = 'block';
